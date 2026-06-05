@@ -1,0 +1,4 @@
+/* Global app styles */
+:host {
+  display: block;
+}

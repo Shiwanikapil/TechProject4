@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json.schemastore.org/angular-cli/angular.json",
+  "version": 1,
+  "projects": {
+    "web4assign-frontend": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "",
+      "sourceRoot": "scr",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/frontend",
+            "index": "scr/index.html",
+            "main": "scr/main.ts",
+            "polyfills": "scr/polyfills.ts",
+            "tsConfig": "tsconfig.app.json",
+            "assets": [],
+            "styles": ["scr/styles.css"],
+            "scripts": []
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "web4assign-frontend:build"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "web4assign-frontend"
+}
